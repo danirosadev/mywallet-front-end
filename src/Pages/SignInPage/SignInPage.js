@@ -24,7 +24,7 @@ export default function SignInPage() {
     function login(e) {
         e.preventDefault()
 
-        const promise = axios.post("http://localhost:5000/auth/login", form)
+        const promise = axios.post("http://localhost:5000/login", form)
         promise.then((res) => {
             navigate("/hoje")
             setUserData(res.data)
